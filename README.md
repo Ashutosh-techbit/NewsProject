@@ -1,4 +1,6 @@
-# Getting Started with NewsWebApp
+# Getting Started with NewsPort
+
+Run this project - https://news-project-main.vercel.app/
 
 ## Available Scripts
 
