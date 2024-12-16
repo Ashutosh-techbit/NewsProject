@@ -1,6 +1,6 @@
 # Getting Started with NewsPort
 
-Run this project - https://news-project-main.vercel.app/
+Run this project - https://newsport.vercel.app/
 
 ## Available Scripts
 
