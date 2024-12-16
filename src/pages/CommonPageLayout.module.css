@@ -1,0 +1,121 @@
+.newsContainer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 20px;
+  background: #f4f6f8;
+  border-radius: 15px;
+}
+
+.newsCard {
+  background: linear-gradient(135deg, #ffffff, #f5f7fa);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px 0;
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 100%;
+}
+
+.newsCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.newsImage {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.newsCard h1 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 10px 0;
+  color: #2c3e50;
+}
+
+.newsCard h3 {
+  font-size: 12px;
+  color: #bdc3c7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.newsCard h4 {
+  font-size: 14px;
+  font-style: italic;
+  color: #7f8c8d;
+  margin-bottom: 15px;
+}
+
+.newsCard p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #34495e;
+  margin-bottom: 20px;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.newsPageButton,
+.saveButton {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: transform 0.2s, background 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.newsPageButton:hover,
+.saveButton:hover {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+  transform: scale(1.05);
+}
+
+.pageTitle {
+  font-size: 25px;
+  text-align: center;
+  color: #2c3e50;
+  padding: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 1200px) {
+  .newsContainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .newsContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .newsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .newsContainer {
+    grid-template-columns: 1fr;
+  }
+}

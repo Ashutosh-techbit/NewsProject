@@ -1,0 +1,229 @@
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #121212;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 15px 15px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.webTitle {
+  color: white;
+  font-weight: 700;
+  padding: 10px 15px;
+  font-size: 20px;
+}
+
+.linksContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  transition: transform 0.3s ease;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding: 5px 15px;
+  border-radius: 5px;
+  transition: color 0.3s, transform 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.link:hover {
+  color: #ff6f61;
+  transform: translateY(-3px);
+}
+
+.activeLink {
+  font-weight: 700;
+  color: #ff6f61;
+  text-decoration: none;
+  border-bottom: 3px solid #ff6f61;
+  padding-bottom: 5px;
+}
+
+.hamburger {
+  display: none;
+  font-size: 30px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.searchBarContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.searchBar {
+  width: 200px;
+  max-width: 100%;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  transition: background 0.3s ease;
+}
+
+.searchBar::placeholder {
+  color: #ddd;
+}
+
+.searchBar:focus {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.searchBarBtn {
+  background: linear-gradient(135deg, #ff6f61, #ffa500);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+}
+
+.searchBarBtn:hover {
+  background: linear-gradient(135deg, #ffa500, #ff6f61);
+  box-shadow: 0 5px 15px rgba(255, 140, 0, 0.5);
+  transform: scale(1.1);
+}
+
+@media (max-width: 1200px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .linksContainer {
+    gap: 20px;
+  }
+
+  .searchBar {
+    width: 180px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .linksContainer {
+    gap: 15px;
+  }
+
+  .searchBar {
+    width: 160px;
+  }
+
+}
+
+@media (max-width: 980px) {
+  .navbar {
+    padding: 10px 15px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .webTitle {
+    font-size: 18px;
+    order: 0;
+  }
+
+  .linksContainer {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .menuOpen {
+    display: flex;
+  }
+
+  .link {
+    padding: 10px 0;
+    width: 100%;
+    text-align: left;
+  }
+
+  .hamburger {
+    display: block;
+    order: -1;
+  }
+
+  .searchBarContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    order: 2;
+  }
+
+  .searchBar {
+    width: 150px;
+  }
+
+  .searchBarBtn {
+    padding: 8px 15px;
+  }
+}
+
+@media (max-width: 520px) {
+  .navbar {
+    padding: 10px 10px;
+  }
+
+  .webTitle {
+    font-size: 16px;
+    order: 0;
+  }
+
+  .linksContainer {
+    gap: 5px;
+  }
+
+  .link {
+    padding: 8px 0;
+    font-size: 14px;
+  }
+
+  .searchBar {
+    width: 85px;
+  }
+
+  .searchBarBtn {
+    padding: 8px 12px;
+  }
+}
